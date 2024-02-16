@@ -3,10 +3,58 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --bg-color: #FFF1F7;
+  --heading-color: #FFC2E6;
+  --text-color: #353430;
+  --accent-text-color: #353430;
+  --marker-color:#FF8DCB;
+  --accent-color: #353430;
+  --hover-accent-color: rgba(50, 49, 45, 0.4);
+  background-image: url("../images/cover-image-light.png");
+  background-image: image-set(
+    url('../images/cover-image-light.avif') type('image/avif'),
+    url('../images/cover-image-light.png') type('image/png'));
+    color: var(--text-color);
+}
+
+.page.theme_light .title  {
+  color: var(--text-color);
+}
+ 
+.page.theme_light .header__decor {
+  display: none;
+}
+
+.page.theme_light .header__decor::before {
+  display: none;
+}
+
+@media (prefers-color-scheme:light) {
+  .page.theme_auto {
+    --bg-color: #FFF1F7;
+    --heading-color: #FFC2E6;
+    --text-color: #353430;
+    --accent-text-color: #353430;
+    --accent-color: #FF8DCB;
+    background-image: url("../images/cover-image-light.png");
+    background-image: image-set(
+      url('../images/cover-image-light.avif') type('image/avif'),
+      url('../images/cover-image-light.png') type('image/png'));
+      color: var(--text-color);
+  }
+
+  .page.theme_auto .title-decor::after {
+    background-color: var(--highlight-text-color);
+  }
+
+  .page.theme_auto .header__decor {
+    display: none;
+  }
+
+  .page.theme_auto .header__decor::before {
+    display: none;
+  }
+
+
 }
