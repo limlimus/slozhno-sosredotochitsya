@@ -27,7 +27,7 @@
   inline-size: 100%;
   block-size: 100%;
   background-color: var(--marker-color, #ff0070);
-  inset-inline-start: -1px;
+  inset-inline-start: 0;
   inset-block: 0;
 }
 
@@ -152,7 +152,7 @@
   color: var(--heading-color, #db00ff);
   font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
   text-shadow: 4px 4px 0 var(--marker-color, #ff0070);
-  line-height: 0.825;
+  line-height: 0.7;
   align-self: center;
   margin-inline-start: -1.25rem;
 }
@@ -174,7 +174,7 @@
 }
 
 .reasons__list {
-  max-inline-size: 66%;
+  max-inline-size: 65%;
   display: flex;
   flex-direction: column;
   gap: 1.3rem;
@@ -207,13 +207,12 @@
 }
 
 .advices__title {
-  flex-basis: 30.7vw;
   flex-grow: 1;
 }
 
 .advices__list {
   flex-grow: 2;
-  max-inline-size: 66%;
+  max-inline-size: 65%;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;

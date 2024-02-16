@@ -4,24 +4,25 @@
   переключая тему
 */
 .page.theme_light {
-  --bg-color: #FFF1F7;
-  --heading-color: #FFC2E6;
+  --bg-color: #fff1f7;
+  --heading-color: #ffc2e6;
   --text-color: #353430;
   --accent-text-color: #353430;
-  --marker-color:#FF8DCB;
+  --marker-color: #ff8dcb;
   --accent-color: #353430;
   --hover-accent-color: rgba(50, 49, 45, 0.4);
   background-image: url("../images/cover-image-light.png");
   background-image: image-set(
-    url('../images/cover-image-light.avif') type('image/avif'),
-    url('../images/cover-image-light.png') type('image/png'));
-    color: var(--text-color);
-}
-
-.page.theme_light .title  {
+    url("../images/cover-image-light.avif") type("image/avif"),
+    url("../images/cover-image-light.png") type("image/png")
+  );
   color: var(--text-color);
 }
- 
+
+.page.theme_light .title {
+  color: var(--text-color);
+}
+
 .page.theme_light .header__decor {
   display: none;
 }
@@ -30,18 +31,19 @@
   display: none;
 }
 
-@media (prefers-color-scheme:light) {
+@media (prefers-color-scheme: light) {
   .page.theme_auto {
-    --bg-color: #FFF1F7;
-    --heading-color: #FFC2E6;
+    --bg-color: #fff1f7;
+    --heading-color: #ffc2e6;
     --text-color: #353430;
     --accent-text-color: #353430;
-    --accent-color: #FF8DCB;
+    --accent-color: #ff8dcb;
     background-image: url("../images/cover-image-light.png");
     background-image: image-set(
-      url('../images/cover-image-light.avif') type('image/avif'),
-      url('../images/cover-image-light.png') type('image/png'));
-      color: var(--text-color);
+      url("../images/cover-image-light.avif") type("image/avif"),
+      url("../images/cover-image-light.png") type("image/png")
+    );
+    color: var(--text-color);
   }
 
   .page.theme_auto .title-decor::after {
@@ -55,6 +57,4 @@
   .page.theme_auto .header__decor::before {
     display: none;
   }
-
-
 }
