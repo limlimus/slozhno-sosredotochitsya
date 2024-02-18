@@ -138,7 +138,8 @@
 }
 
 .header__decor::before {
-  content: "REC";
+  content: "rec";
+  text-transform: uppercase;
   position: absolute;
   color: var(--accent-color, #ff0070);
   inset-inline-end: 1.25rem;
@@ -175,10 +176,8 @@
   grid-column-end: span 2;
 }
 
-.problems .list-item:nth-child(2),
-.problems .list-item:nth-child(3),
-.problems .list-item:nth-child(4) {
-  grid-row-start: 2;
+.problems .list-item:nth-child(2) {
+  grid-column-start: 1;
 }
 
 .advices .list-item:nth-child(1) {
@@ -261,14 +260,13 @@
     flex-direction: column;
     column-gap: 0;
   }
+
+  .header__description {
+    inline-size: 100%;
+  }
 }
 
 @media (width <= 375px) {
-  .header,
-  .footer {
-    padding: 0.625rem;
-  }
-
   .decorated-zone::before {
     inset-inline-end: 0.625rem;
     inset-block-start: 0.625rem;
@@ -277,6 +275,11 @@
   .decorated-zone::after {
     inset-inline-start: 0.625rem;
     inset-block-end: 0.625rem;
+  }
+
+  .header,
+  .footer {
+    padding: 0.625rem;
   }
 
   .header__decor {
@@ -288,12 +291,13 @@
     margin-inline-start: 0;
   }
 
-  .header__description {
-    inline-size: 100%;
-  }
-
   .content {
     padding: 2.5rem 0.625rem;
     gap: 3.125rem;
+  }
+
+  .gallery,
+  .gallery .list {
+    gap: 0.625rem;
   }
 }

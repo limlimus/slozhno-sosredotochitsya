@@ -44,7 +44,7 @@
     display: none;
   }
 
-  .header__decor::before {
-    display: none;
+  .page.theme_dark .header__decor {
+    display: block;
   }
 }
