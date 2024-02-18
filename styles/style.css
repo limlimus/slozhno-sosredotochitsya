@@ -61,8 +61,8 @@
   inline-size: 25px;
   border-inline-end: 1px solid var(--accent-color, #ff0070);
   border-block-start: 1px solid var(--accent-color, #ff0070);
-  inset-inline-end: 0;
-  inset-block-start: 0;
+  inset-inline-end: 1.25rem;
+  inset-block-start: 1.25rem;
 }
 
 .decorated-zone::after {
@@ -74,13 +74,14 @@
   inline-size: 25px;
   border-inline-start: 1px solid var(--accent-color, #ff0070);
   border-block-end: 1px solid var(--accent-color, #ff0070);
-  inset-inline-start: 0;
-  inset-block-end: 0;
+  inset-inline-start: 1.25rem;
+  inset-block-end: 1.25rem;
 }
 
 .header {
-  height: calc(100vh - 2.5rem);
-  margin: 1.25rem;
+  height: 100vh;
+  min-block-size: 668px;
+  padding: 1.25rem;
   position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
@@ -127,8 +128,8 @@
 
 .header__decor {
   position: absolute;
-  inset-inline-end: 0.55rem;
-  inset-block-start: 0.5rem;
+  inset-inline-end: 1.8rem;
+  inset-block-start: 1.8rem;
   block-size: 9px;
   inline-size: 9px;
   background-color: var(--accent-color, #ff0070);
@@ -212,9 +213,9 @@
 }
 
 .footer {
-  height: calc(100vh - 2.5rem);
+  height: 100vh;
   min-height: 668px;
-  margin: 1.25rem;
+  padding: 1.25rem;
   position: relative;
   display: flex;
 }
@@ -265,8 +266,22 @@
 @media (width <= 375px) {
   .header,
   .footer {
-    margin: 0.625rem;
-    height: calc(100vh - 1.25rem);
+    padding: 0.625rem;
+  }
+
+  .decorated-zone::before {
+    inset-inline-end: 0.625rem;
+    inset-block-start: 0.625rem;
+  }
+
+  .decorated-zone::after {
+    inset-inline-start: 0.625rem;
+    inset-block-end: 0.625rem;
+  }
+
+  .header__decor {
+    inset-inline-end: 1.2rem;
+    inset-block-start: 1.2rem;
   }
 
   .header__title {
