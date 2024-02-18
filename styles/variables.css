@@ -4,7 +4,7 @@
 */
 :root {
   --main-font: "IBM Plex mono";
-  --gap: 1.25rem;
+  --logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --bg-color: #000028;
   --heading-color: #db00ff;
   --text-color: #f1b2ce;

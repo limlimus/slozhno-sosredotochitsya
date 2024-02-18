@@ -19,25 +19,19 @@
   color: var(--text-color);
 }
 
-.page.theme_light .title {
-  color: var(--text-color);
-}
-
 .page.theme_light .header__decor {
   display: none;
 }
 
-.page.theme_light .header__decor::before {
-  display: none;
-}
-
 @media (prefers-color-scheme: light) {
-  .page.theme_auto {
+  .page {
     --bg-color: #fff1f7;
     --heading-color: #ffc2e6;
     --text-color: #353430;
     --accent-text-color: #353430;
-    --accent-color: #ff8dcb;
+    --marker-color: #ff8dcb;
+    --accent-color: #353430;
+    --hover-accent-color: rgba(50, 49, 45, 0.4);
     background-image: url("../images/cover-image-light.png");
     background-image: image-set(
       url("../images/cover-image-light.avif") type("image/avif"),
@@ -46,15 +40,11 @@
     color: var(--text-color);
   }
 
-  .page.theme_auto .title-decor::after {
-    background-color: var(--highlight-text-color);
-  }
-
-  .page.theme_auto .header__decor {
+  .header__decor {
     display: none;
   }
 
-  .page.theme_auto .header__decor::before {
+  .header__decor::before {
     display: none;
   }
 }

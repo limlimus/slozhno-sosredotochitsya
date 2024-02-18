@@ -4,11 +4,15 @@
   переключая тему
 */
 .page.theme_dark {
+  --main-font: "IBM Plex mono";
+  --gap: 1.25rem;
   --bg-color: #000028;
   --heading-color: #db00ff;
   --text-color: #f1b2ce;
   --accent-text-color: #000028;
   --accent-color: #ff0070;
+  --hover-accent-color: rgba(255, 0, 112, 0.4);
+  --marker-color: #ff0070;
   background-image: url("../images/cover-image-dark.png");
   background-image: image-set(
     url("../images/cover-image-dark.avif") type("image/avif"),
@@ -17,12 +21,16 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .page.theme_auto {
+  .page {
+    --main-font: "IBM Plex mono";
+    --gap: 1.25rem;
     --bg-color: #000028;
     --heading-color: #db00ff;
     --text-color: #f1b2ce;
     --accent-text-color: #000028;
     --accent-color: #ff0070;
+    --hover-accent-color: rgba(255, 0, 112, 0.4);
+    --marker-color: #ff0070;
     background-image: url("../images/cover-image-dark.png");
     background-image: image-set(
       url("../images/cover-image-dark.avif") type("image/avif"),
