@@ -248,7 +248,7 @@
     flex-direction: column;
   }
 
-  .problems .card{
+  .problems .card {
     grid-column-start: 1;
     grid-column-end: span 3;
   }
