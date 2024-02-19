@@ -38,11 +38,10 @@
   border: 1px solid var(--text-color, #f1b2ce);
 }
 
-.list {
+.section {
   display: grid;
   gap: 1.25rem;
   grid-template-columns: repeat(3, 1fr);
-  list-style-type: none;
 }
 
 .card {
@@ -98,11 +97,11 @@
 .header__theme-menu-button {
   background-color: transparent;
   padding-inline: 0.8rem;
-  padding-block: 0.25rem;
+  padding-block: 0.4rem;
   cursor: pointer;
   border: 1px solid transparent;
   color: var(--accent-color, #ff006f);
-  line-height: 0.8;
+  line-height: 0.6;
   appearance: none;
   text-transform: lowercase;
 }
@@ -151,7 +150,7 @@
   font-size: var(--logo-size, clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem));
   text-shadow: 4px 4px 0 var(--marker-color, #ff0070);
   font-weight: 700;
-  line-height: 0.85;
+  line-height: 0.83;
   align-self: center;
   margin-inline-start: -1.25rem;
 }
@@ -169,18 +168,18 @@
   gap: 5rem;
 }
 
-.reasons .list-item:has(.card),
-.advices .list-item:has(.card),
-.advices .list-item:nth-child(2) {
+.reasons .card,
+.advices  .card,
+.advices .title:nth-child(2) {
   grid-column-start: 2;
   grid-column-end: span 2;
 }
 
-.problems .list-item:nth-child(2) {
+.problems .card:first-of-type {
   grid-column-start: 1;
 }
 
-.advices .list-item:nth-child(1) {
+.advices .title:first-child {
   grid-row: span 2;
 }
 
@@ -190,18 +189,21 @@
   gap: 1.25rem;
 }
 
-.gallery .list-item:first-child,
-.gallery .list-item:last-child {
+.gallery__list {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
+}
+
+.gallery__list-item:first-child,
+.gallery__list-item:last-child {
   grid-column: span 2;
 }
 
-.gallery .list-item:nth-child(2),
-.gallery .list-item:nth-child(3) {
+.gallery__list-item:nth-child(2),
+.gallery__list-item:nth-child(3) {
   grid-row: span 2;
-}
-
-.gallery.list-item {
-  display: block;
 }
 
 .gallery-image {
@@ -232,8 +234,8 @@
     --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
-  .reasons.list,
-  .advices.list {
+  .reasons.section,
+  .advices.section {
     grid-template-columns: 30.9vw 1fr 1fr;
   }
 
@@ -246,16 +248,15 @@
     flex-direction: column;
   }
 
-  .problems .list-item:nth-child(2),
-  .problems .list-item:nth-child(3),
-  .problems .list-item:nth-child(4) {
-    grid-column: span 3;
-    grid-row: span 1;
+  .problems .card{
+    grid-column-start: 1;
+    grid-column-end: span 3;
   }
 }
 
 @media (width < 600px) {
-  .list {
+  .section,
+  .gallery__list {
     display: flex;
     flex-direction: column;
     column-gap: 0;
@@ -266,7 +267,7 @@
   }
 }
 
-@media (width <= 375px) {
+@media (width < 376px) {
   .decorated-zone::before {
     inset-inline-end: 0.625rem;
     inset-block-start: 0.625rem;
@@ -297,7 +298,7 @@
   }
 
   .gallery,
-  .gallery .list {
+  .gallery__list {
     gap: 0.625rem;
   }
 }

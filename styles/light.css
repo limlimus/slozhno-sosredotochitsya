@@ -43,8 +43,4 @@
   .header__decor {
     display: none;
   }
-
-  .page.theme_dark .header__decor {
-    display: block;
-  }
 }

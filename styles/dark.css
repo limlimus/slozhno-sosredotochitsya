@@ -4,8 +4,6 @@
   переключая тему
 */
 .page.theme_dark {
-  --main-font: "IBM Plex mono";
-  --gap: 1.25rem;
   --bg-color: #000028;
   --heading-color: #db00ff;
   --text-color: #f1b2ce;
@@ -22,8 +20,6 @@
 
 @media (prefers-color-scheme: dark) {
   .page {
-    --main-font: "IBM Plex mono";
-    --gap: 1.25rem;
     --bg-color: #000028;
     --heading-color: #db00ff;
     --text-color: #f1b2ce;
@@ -36,5 +32,11 @@
       url("../images/cover-image-dark.avif") type("image/avif"),
       url("../images/cover-image-dark.png") type("image/png")
     );
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .page.theme_dark .header__decor {
+    display: block;
   }
 }
